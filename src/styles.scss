@@ -1,4 +1,20 @@
+
 body {
-	background-color: #eee;
-	padding: 100px;
+	background: radial-gradient(rgb(240,240,220), rgb(215,215,205));
+	font-size:40px;
+}
+
+.step {
+	position: relative;
+	box-sizing: border-box;
+	width: 1200px;
+}
+
+.impress-enabled .step {
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.step.active {
+	opacity: 1;
 }

@@ -6,14 +6,32 @@ var devFlag = new webpack.DefinePlugin({
 
 var config = {
 	entry: {
-		app: ['webpack/hot/dev-server', './src/index.js']
+		app: ['./src/index.js']
 	},
 	output: {
 		path: './build',
 		publicPath: '/build/',
 		filename: 'bundle.js'
 	},
-	plugins: [devFlag]
+	plugins: [devFlag],
+	module: {
+		loaders: [{
+			test: /\.scss$/,
+			loaders: [
+				"style-loader",
+				"css-loader",
+				"autoprefixer-loader?browsers=last 2 version",
+				"sass-loader"
+			]
+		}, {
+			test: /\.css$/,
+			loaders: [
+				"style-loader",
+				"css-loader",
+				"autoprefixer-loader?browsers=last 2 version"
+			]
+		}]
+	}
 };
 
 module.exports = config;

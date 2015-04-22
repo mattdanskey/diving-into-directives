@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "BUILD_DEV=1 webpack-dev-server --hot",
+    "dev": "BUILD_DEV=1 webpack-dev-server --hot --inline",
     "build": "webpack -p"
   },
   "author": "Matthew Danskey",
