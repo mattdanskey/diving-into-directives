@@ -4,7 +4,9 @@
   "description": "A talk and some examples for AngularJS 1.x directives",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "BUILD_DEV=1 webpack-dev-server --hot",
+    "build": "webpack -p"
   },
   "author": "Matthew Danskey",
   "license": "MIT",
@@ -13,6 +15,8 @@
     "css-loader": "^0.10.1",
     "node-sass": "^2.1.1",
     "sass-loader": "^0.6.0",
-    "webpack": "^1.8.5"
+    "style-loader": "^0.11.0",
+    "webpack": "^1.8.5",
+    "webpack-dev-server": "^1.8.2"
   }
 }
