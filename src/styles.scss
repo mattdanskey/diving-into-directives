@@ -36,7 +36,6 @@ body {
 }
 
 .intro-see {
-	// text-align: center;
 	margin-left:200px;
 	font-size: 70px;
 }
@@ -47,10 +46,16 @@ body {
 	color: blue;
 }
 
-.intro-hint {
+.intro-readme {
 	color: #555;
 	font-style: italic;
 	margin-left: 20px;
+}
+
+.intro-hint {
+	color: #888;
+	font-size: 30px;
+	margin-left: 200px;
 }
 
 .diving-title {
