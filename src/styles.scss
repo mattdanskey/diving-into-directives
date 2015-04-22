@@ -25,10 +25,14 @@ body {
 	opacity: 1;
 }
 
-#intro {
+.vertical-flex {
 	display: flex;
 	flex-direction: column;
 	line-height: 90px;
+}
+
+#intro {
+	@extend .vertical-flex;
 }
 
 .intro-see, .intro-link, .intro-hint {
@@ -58,6 +62,12 @@ body {
 	margin-left: 200px;
 }
 
+#rationale {
+	@extend .vertical-flex;
+	padding-left:200px;
+	font-size: 70px;
+}
+
 .diving-title {
 	font-size: 90px;
 }
@@ -76,4 +86,13 @@ body {
 	code {
 		width:100%;
 	}
+}
+
+.letter {
+	font-size:80px;
+	margin-bottom: -50px;
+}
+
+.transclude {
+	width: 100%;
 }

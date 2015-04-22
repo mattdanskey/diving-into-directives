@@ -14,7 +14,9 @@
 			<div class="diving-name">Matthew Danskey</div>
 		</div>
 		<div id="rationale" class="step" data-x="0" data-y="0" data-z="9000">
-			This is why you use directives
+			<span class="peace">Reuse</span>
+			<span class="land">Isolation</span>
+			<span class="bread">Clarity</span>
 		</div>
 		<div id="defining" class="step" data-x="0" data-y="0" data-z="0">
 			<pre><code>return {
@@ -38,76 +40,96 @@
 });</code></pre>
 		</div>
 
-		<div id="restrict" class="step" data-x="0" data-y="-115" data-scale=".2">
-			restrict property
-		</div>
 		<div id="e" class="step" data-x="0" data-y="-115" data-scale=".2">
-			<pre><code style="javascript">'E'</code></pre>
+			<pre><code style="javascript" class="letter">'E'</code></pre>
 			<pre><code>&lt;my-dir&gt;&lt;/my-dir&gt;</code></pre>
 		</div>
 		<div id="a" class="step" data-x="0" data-y="-115" data-scale=".2">
-			<pre><code style="javascript">'A'</code></pre>
+			<pre><code style="javascript" class="letter">'A'</code></pre>
 			<pre><code>&lt;div my-dir&gt;&lt;/div&gt;</code></pre>
 		</div>
 		<div id="c" class="step" data-x="0" data-y="-115" data-scale=".2">
-			<pre><code style="javascript">'C'</code></pre>
+			<pre><code style="javascript" class="letter">'C'</code></pre>
 			<pre><code>&lt;div class="my-dir "&gt;&lt;/div&gt;</code></pre>
 		</div>
 		<div id="m" class="step" data-x="0" data-y="-115" data-scale=".2">
-			<pre><code style="javascript">'M'</code></pre>
+			<pre><code style="javascript" class="letter">'M'</code></pre>
 			<pre><code>&lt;!-- directive: my-dir --&gt;</code></pre>
 		</div>
 
 		<div class="step" data-x="0" data-y="0" data-z="0">
 		</div>
 
-		<div id="scope" class="step" data-x="0" data-y="-55" data-scale=".2">
-			scope
+		<div id="true" class="step" data-x="0" data-y="-55" data-scale=".2">
+			default: shares existing scope
 		</div>
 		<div id="true" class="step" data-x="0" data-y="-55" data-scale=".2">
-			default: inherit
+			<pre><code style="javascript" class="letter">'true'</code></pre>
+			creates new scope (inherits from parents)
 		</div>
 		<div id="isolate" class="step" data-x="0" data-y="-55" data-scale=".2">
+			<pre><code style="javascript" class="letter">'{}'</code></pre>
 			isolate scope
 		</div>
 		<div id="equals" class="step" data-x="0" data-y="-55" data-scale=".2">
-			<pre><code style="javascript">'='</code></pre>
+			<pre><code style="javascript" class="letter">'='</code></pre>
 			<pre><code style="javascript">scope: {
     x:'=myAttr'
 }</code></pre>
+			Two-way binding
 		</div>
 		<div id="at" class="step" data-x="0" data-y="-55" data-scale=".2">
-			<pre><code style="javascript">'@'</code></pre>
+			<pre><code style="javascript" class="letter">'@'</code></pre>
 			<pre><code style="javascript">scope: {
     x:'@myAttr'
 }</code></pre>
+			An expression that evaluates to a string
+			<pre><code style="html">my-attr="{{color}} selected"</code></pre>
 		</div>
 		<div id="ampersand" class="step" data-x="0" data-y="-55" data-scale=".2">
-			<pre><code style="javascript">'&amp;'</code></pre>
+			<pre><code style="javascript" class="letter">'&amp;'</code></pre>
+			<pre><code style="javascript">scope: {
+    x:'&myFuncAttr'
+}</code></pre>
+			Pass in a function that executes <br> in parent scope's context
 		</div>
 
-		<div id="template" class="step">
-			template
+		<div class="step" data-x="0" data-y="0" data-z="0">
 		</div>
-		<div id="templateUrl" class="step">
-			templateUrl
+
+		<div id="template" class="step" data-x="0" data-y="0" data-scale=".2">
+			<pre><code style="javascript">'&lt;div&gt;{{myAttr}}&lt;/div&gt;'</code></pre>
 		</div>
-		<div id="controller" class="step">
-			Specify a controller here, or name of one specified elsewhere
+		<div id="templateUrl" class="step" data-x="0" data-y="0" data-scale=".2">
+			<pre><code style="javascript">templateUrl: '/view/template.html'</code></pre>
 		</div>
-		<div id="controllerAs" class="step">
-			controllerAs, like controller as in 1.2
+
+		<div class="step" data-x="0" data-y="0" data-z="0">
 		</div>
-		<div id="bindToController" class="step">
-			Bind to your controller
+
+		<div id="controller" class="step" data-x="0" data-y="55" data-scale=".2">
+			<pre><code style="javascript">'myCtrl'</code></pre>
+			or define one inline
 		</div>
-		<div id="futureBindToController" class="step">
-			Bind directly, soonish.
+		<div id="controllerAs" class="step" data-x="0" data-y="55" data-scale=".2">
+			<pre><code style="javascript">controllerAs: 'myCtrl'</code></pre>
+			(angular 1.2)
 		</div>
-		<div id="transclude" class="step">
-			Transclude!
+		<div id="bindToController" class="step" data-x="0" data-y="55" data-scale=".2">
+			<pre><code style="javascript">bindToController: 'true'</code></pre>
+			(angular 1.3): <br>
+			Bind isolate scope properties to controller
 		</div>
-		<div id="testing" class="step">
+
+		<div class="step" data-x="0" data-y="0" data-z="0">
+		</div>
+
+		<div id="transclude" class="step" data-x="0" data-y="110" data-scale=".2">
+		<pre><code style="javascript" class="transclude">transclude: 'true',
+template: '&lt;ng-transclude&gt;' +
+          '&lt;/ng-transclude&gt;'</code></pre>
+		</div>
+		<div id="testing" class="step" data-x="0" data-y="165" data-scale=".2">
 			$compile
 		</div>
 
