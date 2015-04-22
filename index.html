@@ -4,14 +4,15 @@
 
 <body>
 	<div id="impress">
-		<div id="intro" class="step" data-x="-1000" data-y="0" data-z="3000">
-			See this talk at <a href="http://mattdanskey.github.io/diving-into-directives">mattdanskey.github.io/diving-into-directives</a>
+		<div id="intro" class="step" data-x="-2000" data-y="0" data-z="6000">
+			<span class="intro-see">See this talk at</span><a class="intro-link" href="http://github.com/mattdanskey/diving-into-directives">github.com/mattdanskey/diving-into-directives</a>
 			<span class="intro-hint">The readme has useful links</span>
 		</div>
-		<div id="diving" class="step" data-x="0" data-y="0" data-z="3000">
-			Diving Into Directives
- 		</div>
-		<div id="rationale" class="step">
+		<div id="diving" class="step" data-x="0" data-y="0" data-z="6000">
+			<div class="diving-title">Diving Into Directives</div>
+			<div class="diving-name">Matthew Danskey</div>
+		</div>
+		<div id="rationale" class="step" data-z="9000">
 			This is why you use directives
 		</div>
 		<div id="defining" class="step">
@@ -22,12 +23,15 @@
 		</div>
 		<div id="e" class="step">
 			E
+			<pre><code>&lt;my-directive&gt;&lt;/my-directive&gt;</code></pre>
 		</div>
 		<div id="a" class="step">
 			A
+			<pre><code>&lt;div my-directive&gt;&lt;/div&gt;</code></pre>
 		</div>
 		<div id="c" class="step">
 			C
+			<pre><code>&lt;div class="my-directive"&gt;&lt;/div&gt;</code></pre>
 		</div>
 		<div id="m" class="step">
 			M
@@ -79,7 +83,9 @@
 	<div class="notes"></div>
 	<div class="navigation"></div>
 
-
+	<link rel="stylesheet" href="lib/highlight/solarized_light.css">
+	<script type="text/javascript" src="lib/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 	<script type="text/javascript" src="lib/impress.js"></script>
 	<script>impress().init();</script>
 	<script src="build/bundle.js"></script>

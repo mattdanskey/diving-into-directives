@@ -1,7 +1,12 @@
 
 body {
 	background: radial-gradient(rgb(240,240,220), rgb(215,215,205));
-	font-size:40px;
+	font-size:50px;
+	color: #121212;
+}
+
+#impress code.hljs{
+	background:none;
 }
 
 .step {
@@ -17,4 +22,42 @@ body {
 
 .step.active {
 	opacity: 1;
+}
+
+#intro {
+	display: flex;
+	flex-direction: column;
+	line-height: 90px;
+}
+
+.intro-see, .intro-link, .intro-hint {
+	margin-bottom: 10px;
+}
+
+.intro-see {
+	// text-align: center;
+	margin-left:200px;
+	font-size: 70px;
+}
+
+.intro-link {
+	font-size: 60px;
+	margin-bottom: 20px;
+	color: blue;
+}
+
+.intro-hint {
+	color: #555;
+	font-style: italic;
+	margin-left: 20px;
+}
+
+.diving-title {
+	font-size: 90px;
+}
+
+.diving-name {
+	font-size: 60px;
+	color: #555;
+	margin-left: 20px;
 }
