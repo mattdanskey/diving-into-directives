@@ -12,53 +12,84 @@
 			<div class="diving-title">Diving Into Directives</div>
 			<div class="diving-name">Matthew Danskey</div>
 		</div>
-		<div id="rationale" class="step" data-z="9000">
+		<div id="rationale" class="step" data-x="0" data-y="0" data-z="9000">
 			This is why you use directives
 		</div>
-		<div id="defining" class="step">
-			Directive Definition Object
+		<div id="defining" class="step" data-x="0" data-y="0" data-z="0">
+			<pre><code>return {
+  restrict:
+  scope:
+  template:
+  controller:
+  transclude:
+};</code></pre>
 		</div>
-		<div id="restrict" class="step">
+		<div id="creating" class="step" data-x="-110" data-y="-30">
+		<pre><code>angular.module('myMod')
+  .directive('myDir', function(){
+
+
+
+
+
+
+
+});</code></pre>
+		</div>
+
+		<div id="restrict" class="step" data-x="0" data-y="-115" data-scale=".2">
 			restrict property
 		</div>
-		<div id="e" class="step">
-			E
+		<div id="e" class="step" data-x="0" data-y="-115" data-scale=".2">
+			<pre><code style="javascript">'E'</code></pre>
 			<pre><code>&lt;my-directive&gt;&lt;/my-directive&gt;</code></pre>
 		</div>
-		<div id="a" class="step">
-			A
+		<div id="a" class="step" data-x="0" data-y="-115" data-scale=".2">
+			<pre><code style="javascript">'A'</code></pre>
 			<pre><code>&lt;div my-directive&gt;&lt;/div&gt;</code></pre>
 		</div>
-		<div id="c" class="step">
-			C
-			<pre><code>&lt;div class="my-directive"&gt;&lt;/div&gt;</code></pre>
+		<div id="c" class="step" data-x="0" data-y="-115" data-scale=".2">
+			<pre><code style="javascript">'C'</code></pre>
+			<pre><code>&lt;div class="my-directive "&gt;&lt;/div&gt;</code></pre>
 		</div>
-		<div id="m" class="step">
-			M
+		<div id="m" class="step" data-x="0" data-y="-115" data-scale=".2">
+			<pre><code style="javascript">'M'</code></pre>
+			<pre><code>&lt;!-- directive: my-directive --&gt;</code></pre>
 		</div>
+
+		<div class="step" data-x="0" data-y="0" data-z="0">
+		</div>
+
+		<div id="scope" class="step" data-x="0" data-y="-55" data-scale=".2">
+			scope
+		</div>
+		<div id="true" class="step" data-x="0" data-y="-55" data-scale=".2">
+			default: inherit
+		</div>
+		<div id="isolate" class="step" data-x="0" data-y="-55" data-scale=".2">
+			isolate scope
+		</div>
+		<div id="equals" class="step" data-x="0" data-y="-55" data-scale=".2">
+			<pre><code style="javascript">'='</code></pre>
+			<pre><code style="javascript">scope: {
+    x:'=myAttr'
+}</code></pre>
+		</div>
+		<div id="at" class="step" data-x="0" data-y="-55" data-scale=".2">
+			<pre><code style="javascript">'@'</code></pre>
+			<pre><code style="javascript">scope: {
+    x:'@myAttr'
+}</code></pre>
+		</div>
+		<div id="ampersand" class="step" data-x="0" data-y="-55" data-scale=".2">
+			<pre><code style="javascript">'&amp;'</code></pre>
+		</div>
+
 		<div id="template" class="step">
 			template
 		</div>
 		<div id="templateUrl" class="step">
 			templateUrl
-		</div>
-		<div id="scope" class="step">
-			scope
-		</div>
-		<div id="true" class="step">
-			default: inherit
-		</div>
-		<div id="isolate" class="step">
-			isolate scope
-		</div>
-		<div id="equals" class="step">
-			=
-		</div>
-		<div id="at" class="step">
-			@
-		</div>
-		<div id="ampersand" class="step">
-			&amp;
 		</div>
 		<div id="controller" class="step">
 			Specify a controller here, or name of one specified elsewhere
